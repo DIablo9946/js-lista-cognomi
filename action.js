@@ -19,17 +19,18 @@ console.log("Il cognome dell'utente è " + cognutente);
 
 // Inserisco il cognome dell'utente nell'array
 cognomi.push(cognutente);
+cognomi.sort();
 console.log(cognomi);
 
 // Stampo la lista
 for (var i = 0; i < cognomi.length; i++) {
   temp = stampa.innerHTML;
   console.log(temp);
-  cognomi.sort(); // Faccio la stampa in maniera alfabetica
+  // cognomi.sort(); // Faccio la stampa in maniera alfabetica
   stampa.innerHTML = temp + "<li>" + cognomi[i] + "</li>";
 
 }
 
 // Dico all'utente a che posto si trovi
 var posto = cognomi.indexOf(cognutente);
-stampa.innerHTML += "Il tuo cognome si trova al " + posto + " posto";
+stampa.innerHTML += "<p>" + "Il tuo cognome si trova al " + posto + " posto" + "</p>";
