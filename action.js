@@ -3,7 +3,7 @@
 
 // Mi preparo le variabili
 
-var cognomi, cognutente, stampa, temp;
+var cognomi, cognutente, stampa, temp, posto;
 
 
 stampa = document.getElementById('my');
@@ -21,13 +21,15 @@ console.log("Il cognome dell'utente è " + cognutente);
 cognomi.push(cognutente);
 console.log(cognomi);
 
-// Stampo la lista nell'ordine alfabetico
+// Stampo la lista
 for (var i = 0; i < cognomi.length; i++) {
   temp = stampa.innerHTML;
   console.log(temp);
-  stampa.innerHTML = temp + "<li>" + cognomi[i] + "<li>";
+  cognomi.sort(); // Faccio la stampa in maniera alfabetica
+  stampa.innerHTML = temp + "<li>" + cognomi[i] + "</li>";
 
 }
 
 // Dico all'utente a che posto si trovi
-// stampa.innerHTML = "Il Tuo cognome si trova al " + " posto";
+var posto = cognomi.indexOf(cognutente);
+stampa.innerHTML += "Il tuo cognome si trova al " + posto + " posto";
