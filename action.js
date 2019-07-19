@@ -32,5 +32,5 @@ for (var i = 0; i < cognomi.length; i++) {
 }
 
 // Dico all'utente a che posto si trovi
-var posto = cognomi.indexOf(cognutente);
+var posto = cognomi.indexOf(cognutente) + 1;
 stampa.innerHTML += "<p>" + "Il tuo cognome si trova al " + posto + " posto" + "</p>";
